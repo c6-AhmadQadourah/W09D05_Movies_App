@@ -1,14 +1,22 @@
 import "./App.css";
 import HomeList from "./Components/HomeList";
-
+import{useState} from 'react'
+import MovieDetails from "./Components/MovieDetails";
 function App() {
+
+
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>Movie App</h1>
       </header>
       <div>
+
          <HomeList/>
+      </div>
+      <div>
+      <MovieDetails/>
       </div>
     </div>
   );
