@@ -2,9 +2,9 @@ import React from 'react'
 import axios from 'axios'
 import { useEffect, useState } from "react"
 import MovieDetails from './MovieDetails'
-const HomeList = ( {id}) => {
+const HomeList = ( {setId , setHidden}) => {
  
- const [movies, setmovies] = useState([]);
+  const [movies, setmovies] = useState([]);
 
 
   useEffect(() => {
@@ -27,7 +27,10 @@ const HomeList = ( {id}) => {
     <>
     {  movies.map((elem, i)=>{
      return <div  className="elem">
- <h1 onClick={()=>{id = elem.id}} key={i} >
+ <h1 onClick={()=>{setId(elem.id);
+  setHidden(true) 
+ console.log( elem.id)} 
+  } key={i} >
   {elem.title}
       </h1>
       <img key={elem.id}  className='img' src={`https://image.tmdb.org/t/p/w370_and_h556_bestv2${elem.poster_path}` } />
