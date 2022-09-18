@@ -1,9 +1,4 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
 
-}
 h1 {
   text-align: center;
 }
@@ -13,7 +8,7 @@ h1 {
 
 
 .movieBody{
-  display: block;
+
   --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     margin-left: auto;
@@ -24,7 +19,18 @@ h1 {
 
     margin-bottom: 2.5rem;
 }
+.elem {
+  
+ max-height: 50fr;
+  
+  
+   
+}
 
 .img{
   max-width: 39ex;
+}
+.p{ 
+  text-align: center;
+ 
 }

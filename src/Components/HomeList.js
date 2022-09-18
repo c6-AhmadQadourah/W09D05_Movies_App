@@ -37,6 +37,7 @@ const HomeList = ({ setId, setHidden }) => {
     <>
       {movies.map((elem, i) => {
         return (
+          <div>
           <div className="elem">
             <h1
               onClick={() => {
@@ -49,13 +50,12 @@ const HomeList = ({ setId, setHidden }) => {
               {elem.title}
             </h1>
             <p> {elem.overview} </p>
-            <img 
+          </div>
+          <img 
               key={elem.id}
               className="img"
               src={`https://image.tmdb.org/t/p/w370_and_h556_bestv2${elem.poster_path}`}
             />
-
-        
           </div>
         );
       })}
