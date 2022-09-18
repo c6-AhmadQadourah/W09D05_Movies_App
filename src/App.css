@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
 }
 h1 {
   text-align: center;
@@ -9,6 +10,21 @@ h1 {
 
 
 
-.App{
+
+
+.movieBody{
   display: block;
+  --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: calc(var(--bs-gutter-x)*.5);
+    padding-right: calc(var(--bs-gutter-x)*.5);
+    width: 100%;
+
+    margin-bottom: 2.5rem;
+}
+
+.img{
+  max-width: 39ex;
 }

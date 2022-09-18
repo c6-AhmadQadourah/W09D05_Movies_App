@@ -48,19 +48,21 @@ const HomeList = ({ setId, setHidden }) => {
             >
               {elem.title}
             </h1>
-            <img
+            <p> {elem.overview} </p>
+            <img 
               key={elem.id}
               className="img"
               src={`https://image.tmdb.org/t/p/w370_and_h556_bestv2${elem.poster_path}`}
             />
 
-            <p> {elem.overview} </p>
+        
           </div>
         );
       })}
     <button onClick={()=>{
-      setmovies( nextPage)
-    }} > Show more</button>
+      setmovies([...movies, ...nextPage])
+      console.log(movies)
+    }} > See More</button>
 
 
     </>

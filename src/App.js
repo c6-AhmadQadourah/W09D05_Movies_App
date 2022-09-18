@@ -17,7 +17,7 @@ function App() {
         <h1>Movie App</h1>
       </header>
       <div>
-
+        
        {!hidden?  <HomeList setId={setId} setHidden={setHidden} /> :<MovieDetails id ={id} setHidden={setHidden} />}  
        
       </div>
