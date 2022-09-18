@@ -1,9 +1,12 @@
 import axios from "axios";
 import { useEffect, useState, useContext } from "react";
 import HomeList from "./HomeList";
+import Actors from "./Actors";
 
-const MovieDetails = ({ id }) => {
+const MovieDetails = ({ id, setHidden }) => {
   const [moviesInfo, setmoviesInfo] = useState([]);
+  const [hide, setHide] = useState(true);
+
   useEffect(() => {
     const info = axios
       .get(
@@ -33,11 +36,13 @@ const MovieDetails = ({ id }) => {
      <h3>budget: {moviesInfo.budget} $</h3>
     </div>
     <div className="buttons">
-    <button> Back To home</button>
+    <button onClick={()=>{setHidden(!setHidden)}} > Back To home</button>
     <button> Add To Fav</button>
     <button> Go to Fav</button>
-    <button>Show Actors</button>
-
+    <button onClick={()=>{setHide(!hide) }} >Show Actors</button>
+    </div>
+    <div>
+     { !hide ? <Actors /> : null}
     </div>
     </>
   );

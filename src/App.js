@@ -16,7 +16,7 @@ function App() {
       </header>
       <div>
 
-       {!hidden?  <HomeList setId={setId} setHidden={setHidden} /> :<MovieDetails id ={id} />}  
+       {!hidden?  <HomeList setId={setId} setHidden={setHidden} /> :<MovieDetails id ={id} setHidden={setHidden} />}  
        
       </div>
       <div>
