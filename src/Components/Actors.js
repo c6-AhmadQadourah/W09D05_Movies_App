@@ -17,9 +17,9 @@ const Actors = () => {
  
 
 console.log (actors)
-  return <div>
+  return <div className="actorsDiv">
 {actors.map((elem,i)=>{
-  return  <div>
+  return  <div className="actors">
     {  <img   className='img' src={`https://image.tmdb.org/t/p/w370_and_h556_bestv2${elem.profile_path}` } />}
   </div>
 })}

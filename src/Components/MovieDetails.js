@@ -49,7 +49,7 @@ const MovieDetails = ({ id, setHidden }) => {
     <button className="buttons" id="showActorsButton" onClick={()=>{setHide(!hide) }} >Show Actors</button>
     </div>
     </div>
-    <div className="actorsDiv">
+    <div >
      { !hide ? <Actors /> : null}
     </div>
     </>
