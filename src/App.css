@@ -4,11 +4,23 @@ h1 {
 }
 
 
-
+.container{
+  display: grid ;
+  grid-template-columns: 1fr 1fr;
+border: solid 10px black;
+}
 
 
 .movieBody{
+ 
 
+background-color: blue;
+padding: 20px;
+border: 20px solid red;
+margin: 20px;
+height: fit-content;
+width: fit-content;
+box-sizing: border-box;
   --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     margin-left: auto;
@@ -19,16 +31,33 @@ h1 {
 
     margin-bottom: 2.5rem;
 }
-.elem {
+
+.starDiv{
+ position: relative;
+font-size: x-large;
+left: 250px;
+padding: 0px;
+margin: 0px;
+}
+
+.checked {
+  position: relative;
+  bottom: 15px;
+  left: 35px;
+  color: orange;
   
- max-height: 50fr;
-  
-  
-   
+}
+.elem{
+  position: relative;
+  right: 300px;
+
 }
 
 .img{
-  max-width: 39ex;
+  max-width: 30ex;
+  align-self: center;
+position: relative;
+left:100px;
 }
 .p{ 
   text-align: center;

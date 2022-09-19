@@ -37,7 +37,15 @@ const HomeList = ({ setId, setHidden }) => {
     <>
       {movies.map((elem, i) => {
         return (
-          <div>
+
+          <div className="container">
+          <div className="imagediv">
+<img 
+              key={elem.id}
+              className="img"
+              src={`https://image.tmdb.org/t/p/w370_and_h556_bestv2${elem.poster_path}`}
+            />
+            </div>
           <div className="elem">
             <h1
               onClick={() => {
@@ -49,13 +57,15 @@ const HomeList = ({ setId, setHidden }) => {
             >
               {elem.title}
             </h1>
+            <div className="starDiv" >
+          
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+              {elem.vote_average <=2 ?<span class="fa fa-star checked"></span> :elem.vote_average <=4 ? <div> <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span> </div>: elem.vote_average<=7 ?<div> <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span> </div>:<div> <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span> </div>  }
+              </div>
+
             <p> {elem.overview} </p>
           </div>
-          <img 
-              key={elem.id}
-              className="img"
-              src={`https://image.tmdb.org/t/p/w370_and_h556_bestv2${elem.poster_path}`}
-            />
+          
           </div>
         );
       })}
