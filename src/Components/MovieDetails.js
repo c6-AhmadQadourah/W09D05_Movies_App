@@ -8,7 +8,7 @@ const MovieDetails = ({ id, setHidden }) => {
   const [showActors, setshowActors] = useState(false);
   const [hideActors, sethideActors] = useState("Show Actors");
  
-  
+  let fav = JSON.parse(localStorage.getItem("fav")) || [];
 
 
   useEffect(() => {

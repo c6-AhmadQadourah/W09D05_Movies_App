@@ -23,7 +23,8 @@ function App() {
     
       
     <div className="App">
-      <idContext.Provider value={id}></idContext.Provider>
+      <idContext.Provider value={id}><Actors/> 
+      
      
       <header className="App-header">
         <h1 className="Movie">Movie Slayer</h1>
@@ -37,6 +38,7 @@ function App() {
       <div>
       
       </div>
+      </idContext.Provider>
     </div>
   );
 }

@@ -11,7 +11,8 @@ const Actors = () => {
   const id2 = useContext(idContext)
   console.log(id2)
   useEffect(() => {
-    axios.get `https://api.themoviedb.org/3/movie/${id2}/credits?api_key=1bfa430aada4409bfa6a3c5528128e8a`
+    console.log(id2)
+   axios.get( `https://api.themoviedb.org/3/movie/${id2}/credits?api_key=1bfa430aada4409bfa6a3c5528128e8a`)
     .then((response)=>{
       setActors(response.data.cast)
       console.log (response.data.cast)
