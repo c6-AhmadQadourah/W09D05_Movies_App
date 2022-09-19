@@ -63,7 +63,7 @@ const HomeList = ({ setId, setHidden }) => {
               {elem.vote_average <=2 ?<span class="fa fa-star checked"></span> :elem.vote_average <=4 ? <div> <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span> </div>: elem.vote_average<=7 ?<div> <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span> </div>:<div> <span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span><span class="fa fa-star checked"></span> </div>  }
               </div>
 
-            <p> {elem.overview} </p>
+            <p className="over"> {elem.overview} </p>
             <p className="date"> Release date : {elem.release_date}</p> 
            <p className="date"> Total Votes : {elem.vote_count}</p> 
           </div>
@@ -71,7 +71,7 @@ const HomeList = ({ setId, setHidden }) => {
           </div>
         );
       })}
-    <button onClick={()=>{
+    <button className="seeMore" onClick={()=>{
       setmovies([...movies, ...nextPage])
       console.log(movies)
     }} > See More</button>
