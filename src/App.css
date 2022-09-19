@@ -5,6 +5,12 @@ h1 {
 
 
 .container{
+  float: left;
+  border-radius: 30px;
+padding: 10px;
+margin: 10px;
+width: 500px;
+height: 350px;
   display: grid ;
   grid-template-columns: 1fr 1fr;
 border: solid 10px black;
@@ -32,6 +38,14 @@ box-sizing: border-box;
     margin-bottom: 2.5rem;
 }
 
+.date{
+  font-size: large;
+  font-weight: bold;
+  position: relative;
+  top: 30px;
+
+}
+
 .starDiv{
  position: relative;
 font-size: x-large;
@@ -54,6 +68,7 @@ margin: 0px;
 }
 
 .img{
+  border-radius: 20px;
   max-width: 30ex;
   align-self: center;
 position: relative;

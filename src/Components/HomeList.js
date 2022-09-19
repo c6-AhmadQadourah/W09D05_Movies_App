@@ -64,6 +64,8 @@ const HomeList = ({ setId, setHidden }) => {
               </div>
 
             <p> {elem.overview} </p>
+            <p className="date"> Release date : {elem.release_date}</p> 
+           <p className="date"> Total Votes : {elem.vote_count}</p> 
           </div>
           
           </div>
