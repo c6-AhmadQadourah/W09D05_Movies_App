@@ -35,6 +35,7 @@ const HomeList = ({ setId, setHidden }) => {
 
   return (
     <>
+    
       {movies.map((elem, i) => {
         return (
 
