@@ -2,12 +2,17 @@ import axios from "axios";
 import { useEffect, useState, useContext } from "react";
 import HomeList from "./HomeList";
 import Actors from "./Actors";
-
 const MovieDetails = ({ id, setHidden }) => {
   const [moviesInfo, setmoviesInfo] = useState([]);
   const [hide, setHide] = useState(true);
+  const [showActors, setshowActors] = useState(false);
+  const [hideActors, sethideActors] = useState("Show Actors");
+ 
+  
+
 
   useEffect(() => {
+    
     const info = axios
       .get(
         `https://api.themoviedb.org/3/movie/${id}?language=en-US&api_key=1bfa430aada4409bfa6a3c5528128e8a`
@@ -46,11 +51,12 @@ const MovieDetails = ({ id, setHidden }) => {
     <button className="buttons" id="backToHomeButton"  onClick={()=>{setHidden(!setHidden)}} > Back To home</button>
     <button className="buttons" id="addToFavButton" > Add To Favorites</button>
     <button className="buttons" id="goToFavButton"> Go to Favorites</button>
-    <button className="buttons" id="showActorsButton" onClick={()=>{setHide(!hide) }} >Show Actors</button>
+    <button className="buttons" id="showActorsButton" onClick={()=>{setHide(!hide) ; !showActors&& sethideActors("Hide Actors") ;}} >{hideActors}</button>
     </div>
-    </div>
+    </div> 
     <div >
-     { !hide ? <Actors /> : null}
+   
+    { !hide ?  <Actors  /> : null} 
     </div>
     </>
   );

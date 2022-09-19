@@ -1,13 +1,17 @@
 import React from "react";
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
+import { idContext } from "../App";
+
 
 
 const Actors = () => {
   const [actors, setActors] = useState([]);
-
+  
+  const id2 = useContext(idContext)
+  console.log(id2)
   useEffect(() => {
-    axios.get `https://api.themoviedb.org/3/movie/985939/credits?api_key=1bfa430aada4409bfa6a3c5528128e8a`
+    axios.get `https://api.themoviedb.org/3/movie/${id2}/credits?api_key=1bfa430aada4409bfa6a3c5528128e8a`
     .then((response)=>{
       setActors(response.data.cast)
       console.log (response.data.cast)
