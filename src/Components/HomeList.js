@@ -35,10 +35,10 @@ const HomeList = ({ setId, setHidden }) => {
 
   return (
     <>
-
+     <div className="big"> 
       {movies.map((elem, i) => {
         return (
-
+                
           <div className="container">
           <div className="imagediv">
 <img 
@@ -70,9 +70,12 @@ const HomeList = ({ setId, setHidden }) => {
           </div>
           
           </div>
+
         );
       })}
-    <button className="seeMore" onClick={()=>{
+      </div>
+
+      <button className="seeMore" onClick={()=>{
       setmovies([...movies, ...nextPage])
       console.log(movies)
     }} > See More</button>

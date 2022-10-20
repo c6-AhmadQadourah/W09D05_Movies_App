@@ -3,11 +3,13 @@ h1 {
 }
 .Movie {
   position: relative;
-  left: 550px;
+  left: 630px;
 }
 .App-header {
   display: flex;
   align-items: center;
+  position: relative;
+  left: 150px;
 }
 .container {
   float: left;
@@ -20,6 +22,16 @@ h1 {
   grid-template-columns: 1fr 1fr;
   border: solid 5px rgb(18, 130, 109);
 }
+
+.App{
+  background-color: black;
+  color: aliceblue;
+  height: 100%;
+  position: relative;
+  bottom: 100px;
+  overflow: hidden;
+}
+
 
 .over {
   overflow: hidden;
@@ -135,7 +147,7 @@ box-sizing: border-box;
   display: inline-block;
   font-size: 16px;
   position: relative;
-  left: 580px;
+ left: 850px;
 }
 
 .homeButton {
@@ -189,7 +201,13 @@ box-sizing: border-box;
  bottom: 370px;
 }
 
-
+.big{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: 100px;
+  position: relative;
+  left: 150px;
+}
 .buttons{
 
   background-color: rgb(18, 130, 109);
